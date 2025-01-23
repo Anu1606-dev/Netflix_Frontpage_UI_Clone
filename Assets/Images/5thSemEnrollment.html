@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://www.jisexam.org/ExamSystemNew/forms/frmPrintExamForm.aspx -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title></title>
+<style>
+
+@media print{ 
+  @page {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}    
+    
+    
+*{margin: 0 auto; padding: 0;}
+body{ font-family: Calibri;background: rgb(204,204,204); font-size:12px;line-height: 15px; }
+page {background: white; display: block; margin: 0 auto; }
+page[size="A4"] { width: 21cm; height: 29.7cm; }
+.main{padding:10px 30px;}
+.all-clear:after, .all-clear:before,.part:after, .part:before,.all-clear:after, .all-clear:before{ content: "";display: table;clear: both;}
+.part{   display: flex;/* important */align-items: stretch;}
+.pull-left{ float: left}
+.pull-right{ float: right}
+.border{ border: 1px solid #333;}
+.border-bottom{ border-bottom: 1px solid #333;}
+.border-top{ border-top: 1px solid #333;}
+.pl-10{padding-left: 10px;}
+.pr-10{padding-right: 10px;}
+.p-10{padding: 10px;}
+.p-5{padding: 5px;}
+.mt-5{ margin-top:5px;}
+.mt-10{ margin-top:10px;}
+.mt-20{ margin-top:20px;}
+.mt-30{ margin-top: 30px;}
+.ml-10{ margin-left: 10px;}
+.lineheight-16{}
+.heading{ width: 30%;flex: 1}
+.heading-details:before{content: "\003A"; margin-right: 10px; min-height: 100%; }
+.heading-details{ width: 70%;align-items: flex-start;}
+.d-inline-block {display: inline-block!important;}
+fieldset {border: 1px solid white;}
+legend {padding: 0 10px;}
+.h2{ font-size: 16px; line-height: 18px; font-weight: 600}
+h2{ font-size: 14px; line-height: 16px; font-weight: 600}
+.w20{ width:20%;}
+.w80{ width:80%;}
+.w30{ width:30%;}
+.w70{ width:70%;}
+.w40{ width:40%;}
+.w60{ width:60%;}
+.h-100{  min-height: 100%;}
+.h-6{  height: 20px;}
+.img-full{width: 100%;}
+.text-center{ text-align: center}
+.font10{ font-size:10px;}
+span.print-btn{ background:#f00; color:#fff; padding:5px 10px; font-size:12px; font-weight:500; border-radius:2px;}
+/*-----------------Headpart Start-------------*/
+.headpart {display: block; }
+.logo{ justify-content:flex-start; }
+.logo img{width: 5cm; }
+.report{ line-height: 40px; font-weight: 700; color: #031767; font-size: 18px; }
+/*-----------------Headpart End-------------*/
+
+/*-----------------College Information Start-------------*/
+.college-information{border: 1px solid #333; padding: 0px; border-bottom: none;}
+/*-----------------College Information End-------------*/
+
+/*-----------------University Details Start-------------*/
+.university-details{border: 1px solid #333; padding: 0px; border-bottom: none;}
+.university-details h2{padding: 0 10px;}
+/*-----------------University Details End-------------*/
+/*-----------------General Details Start-------------*/
+.student-photo{ border: 1px solid #ccc; margin-bottom: 5px; width:90px;}
+.student-photo img{ height: 90px; width: 90px;}
+.sign{ border: 1px solid #ccc; margin-bottom: 10px; width:90px;}
+.sign img{ height: 20px; width: 90px;}
+/*-----------------General Details End-------------*/
+
+/*-----------------Subjects Offered Start-------------*/
+.table{border-top: 1px solid #333; margin-top: 10px;}
+.table-bordered td{padding:0 10px; border-bottom: 1px solid #333;border-bottom: 1px solid #333;}
+.table-bordered tr td:first-child{border-right: 1px solid #333;}
+.table-bordered thead td{ font-weight: 700}
+/*-----------------Subjects Offered end-------------*/
+/*-----------------DECLARATION Start-------------*/
+.declaration ol { padding-left:20px}
+.declaration ol li { line-height: 14px;}
+/*-----------------DECLARATION end-------------*/
+</style>
+
+        <script type="text/javascript" src="./5thSemEnrollment_files/ClientScriptLib.js.download"></script> 
+        <script type="text/javascript" src="./5thSemEnrollment_files/DynamicHtml.js.download"></script> 
+        <script type="text/javascript" src="./5thSemEnrollment_files/DynamicHtmlTemplate.js.download"></script> 
+        <script type="text/javascript" src="./5thSemEnrollment_files/ReportList.js.download"></script> 
+        <script type="text/javascript" src="./5thSemEnrollment_files/PrintExamForm.js.download"></script> 
+
+
+
+</head>
+
+<body onload="Init();" cz-shortcut-listen="true">
+<form method="post" action="https://www.jisexam.org/ExamSystemNew/forms/frmPrintExamForm.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQyNjAwMTMxM2RkIYI8IhpLVjise64NXjLmBdmb2Z8kYT+JBVb3Kky+ovA=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./5thSemEnrollment_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./5thSemEnrollment_files/ScriptResource.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./5thSemEnrollment_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./5thSemEnrollment_files/jsdebug" type="text/javascript"></script>
+<script src="./5thSemEnrollment_files/jsdebug(1)" type="text/javascript"></script>
+<script src="./5thSemEnrollment_files/jsdebug(2)" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="866AA197">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAcVZtgJ57BEBtPwVgiK5hJscxm9/JgZUqiDlwYNWF6YdVUM9kHqI1Bl2tfZN8vqlKPjmO5cTUt3Ej7BAQB4Fcr891wRCZW31YLk6wa+Aru1svDu+GEbARd9D7MpP3KE7+qFnAXV5FM8L425w+mKwf/gu9l4X8/0YuXuKSyg/ATN0SbKqEPk5pNbVT7/Nnfqwac=">
+</div>
+    <div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('m_ScriptManager', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+      
+                
+        </div>     
+
+    <page size="A4">
+     <div class="main">
+     <!---------Head Part Start----------->
+       <div class="headpart all-clear">
+          <div class="logo pull-left">
+            <a><img id="img_college" src="./5thSemEnrollment_files/gnit.png" alt="JISU Logo"></a>
+          </div>
+          <div class="report pull-right">
+            <span id="m_report_title">Student Enrollment Application</span>  <span id="cmd_print" class="print-btn" onclick="PrintDoc();" style="">Print</span>
+          </div>
+       </div>
+     <!-----------Head Part Start-----------> 
+     <!---------College Information Start-------->
+       <div class="college-information mt-5">
+        <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">College</div>
+             <div class="heading-details pull-right"><span id="m_college_name">Guru Nanak Institute of Technology</span></div>
+        </div>
+       <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Programme /Course Name </div>
+             <div class="heading-details pull-right"><span id="m_course_stream">B.TECH - INFORMATION TECHNOLOGY</span></div>
+        </div>
+        <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Exam Name </div>
+             <div class="heading-details pull-right"><span id="m_exam_name">B.TECH - SEMESTER - 5 (AY 2024-25)</span></div>
+        </div>
+        <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Branch Name </div>
+             <div class="heading-details pull-right"><span id="m_stream">INFORMATION TECHNOLOGY</span></div>
+        </div>
+        <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Category of the Examinee </div>
+             <div class="heading-details pull-right"><span id="m_exam_type">Regular</span></div>
+        </div>
+        <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Roll No. </div>
+             <div class="heading-details pull-right"><span id="m_roll_no">500422020013</span></div>
+        </div>
+       <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Registration No. </div>
+             <div class="heading-details pull-right"><span id="m_reg_no">221430110372</span></div>
+        </div>
+     </div>
+     <!---------College Information Start-------->
+     <!---------University Details Start-------->
+       <fieldset class="university-details mt-5">
+        <legend class="h2 ml-10">University Details</legend>
+        <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Exam Cycle</div>
+             <div class="heading-details pull-right"><span id="m_exam_cycle">Odd</span></div>
+        </div>
+
+        <div class="part all-clear border-bottom pl-10 pr-10 lineheight-16">
+            <div class="heading pull-left">Medium </div>
+             <div class="heading-details pull-right">English</div>
+        </div>
+        </fieldset>
+     <!---------University Details end-------->
+ 
+      <!---------General Details Start-------->
+       <fieldset class="university-details mt-5">
+        <legend class="h2 ml-10">General Details</legend>
+        <div class="part border-bottom all-clear">
+          <div class="w80 pull-left">
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Full Name  </div>
+              <div class="heading-details pull-right w60"><span id="m_name">ANUSHKA SARKAR</span></div>
+            </div>
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Gurdian's Name  </div>
+              <div class="heading-details pull-right w60"><span id="m_gurdian_name">Abhiman Sarkar</span></div>
+            </div>
+ 
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Gender  </div>
+              <div class="heading-details pull-right w60"><span id="m_sex">-</span></div>
+            </div>
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Date of Birth(dd-mm-yyyy)  </div>
+              <div class="heading-details pull-right w60"><span id="m_dob">16/06/2003</span></div>
+            </div>
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Caste Category  </div>
+              <div class="heading-details pull-right w60"><span id="m_caste">-</span></div>
+            </div>
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Mobile No.  </div>
+              <div class="heading-details pull-right w60"><span id="m_mobile">9007321026</span></div>
+            </div>
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Adhaar No.  </div>
+              <div class="heading-details pull-right w60"><span id="m_aadhar">-</span></div>
+            </div>
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left w40">Email Address  </div>
+              <div class="heading-details pull-right w60"><span id="m_email">sarkaranushka614@gmail.com</span></div>
+            </div>
+            <div class="part all-clear pl-10 pr-10 lineheight-16">
+              <div class="heading pull-left h-100">Correspondence Permanent Address  </div>
+              <div class="heading-details pull-right w60"><span id="m_address">Sodepur, Natagarh, Nabapally, kolkata-700113</span></div>
+            </div>
+           </div>
+          <div class="w20 pull-right">
+             <div class="student-photo p-5">
+               <img id="img_profile" src="./5thSemEnrollment_files/7247_profile.jpg" alt="Student Photo" class="img-full">
+             </div>
+             <div class="sign p-5 h-6 text-center">
+               <img id="img_sig" src="./5thSemEnrollment_files/7247_sig.jpg" alt="Student Sign" class="h-100">
+             </div>
+          </div>
+        </div>
+        </fieldset>
+     <!---------General Details end-------->
+ 
+      <!---------Subjects Offered Start-------->
+       <fieldset class="university-details mt-5">
+        <legend class="h2 ml-10">Subjects Offered</legend>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
+           <thead>
+            <tr>
+              <td class="w30">Subject Code </td>
+              <td class="w70">Subject Name</td>
+            </tr>
+            </thead>
+            <tbody id="m_subject_list"><tr><td>HSMC504</td><td>ECONOMICS FOR ENGINEERS </td></tr><tr><td>IT501</td><td>DATABASE MANAGEMENT SYSTEM</td></tr><tr><td>IT502</td><td>COMPUTER NETWORKING</td></tr><tr><td>IT503</td><td>DESIGN AND ANALYSIS OF ALGORITHM</td></tr><tr><td>IT505C</td><td>PROGRAMMING PRACTICE USING C++</td></tr><tr><td>IT591</td><td>DATABASE MANAGEMENT SYSTEM LAB</td></tr><tr><td>IT592</td><td>COMPUTER NETWORKING LAB</td></tr><tr><td>IT593</td><td>DESIGN AND ANALYSIS OF ALGORITHM LAB</td></tr><tr><td>IT595C</td><td>PROGRAMMING PRACTICE USING C++ LAB</td></tr><tr><td>MC501</td><td>INTELLECTUAL PROPERTY RIGHT</td></tr><tr><td>PR591</td><td>MINOR PROJECT - I</td></tr><tr><td>PR592</td><td>SKILL DEVELOPMENT - V: SOFT SKILL AND APTITUDE - II</td></tr></tbody>
+        </table>
+
+        </fieldset>
+     <!---------Subjects Offered end-------->
+
+     
+     <div id="m_exam_form_footer_jisu" style="display:none">
+ 
+          <!---------DECLARATION BY THE CANDIDATE start-------->
+          <div class="declaration mt-5 font10">
+          <h2>DECLARATION BY THE CANDIDATE</h2>
+          <ol>
+            <li>I am aware that, I have to fulfil criteria of attendance by the University/ MCI, failing which I shall be held “NOT ELIGIBLE” and will not be allowed to appear inExamination.</li>
+            <li>I hereby declare that I have gone through the syllabus as prescribed and adopted by the University and relevant rules of the Heads of Passing which are applicable forthe examination for which I am appearing and I accept the same without any challenge (wherever applicable).</li>
+            <li>I shall be responsible if my application form is rejected for any errors, wrong or incomplete entries made by me in the examination form.</li>
+            <li>I am not admitted to the course after the cut-off date declared by the University for grant of terms.</li>
+            <li>I fulfil all the criteria for the admission in the course as defined by the MCI/ University and I am not defying the criteria of the admission order.</li>
+          </ol>
+  
+          </div>
+           <!---------DECLARATION BY THE CANDIDATE end-------->
+        <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w30 pull-right mt-10">
+        <p class="border-top text-center">Signature of Candidate in running hand</p>
+        </div>
+        </div>
+        <!---------Date and place end-------->
+   
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION Start-------->
+         <div class="declaration mt-5 font10">
+         <p>I certify:</p>
+          <ol>
+            <li id="m_declaration_jisu">That Shri/Smt/Kum. --- is a bonafide student of this college, admitted to the ---</li>
+            <li>That the candidate has completed the academic terms to appear in this examination (wherever applicable).</li>
+            <li>That the information furnished by the said candidate is verified from his/her documents and that the candidate is Eligible to appear for University Examination.</li>
+          </ol>
+  
+          </div>
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION end-------->
+ 
+         <div class="border mt-5 p-10 font10">
+           <p>In case of any difficulty during the form fillup / examination fees payment, you may contact in the below mentioned numbers between <strong>10am- 5pm(Monday-Friday), 10am-2pm(Saturday) except sunday/holiday:</strong></p>
+           <p></p>
+           <p>For accounts related information: <strong>94333-54786 / 62909-65326</strong></p>
+           <p>For technical information related to examination form: <strong>83360-47403</strong></p>
+           <p>For any subject related information: Contact respective departmental Heads / Co-Ordinator</p>
+         </div>
+ 
+         <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w40 pull-right mt-10">
+        <p class="border-top text-center">Signature &amp; Seal of the Head of the Department/Principal</p>
+        </div>
+        </div>
+</div>
+
+
+     
+     <div id="m_exam_form_footer_gnipst" style="display:none">
+ 
+          <!---------DECLARATION BY THE CANDIDATE start-------->
+          <div class="declaration mt-5 font10">
+          <h2>DECLARATION BY THE CANDIDATE</h2>
+          <ol>
+            <li>I hereby declare that I have gone through the syllabus as prescribed and adopted by the University and relevant rules of the Heads of Passing which are applicable forthe examination for which I am appearing and I accept the same without any challenge (wherever applicable).</li>
+            <li>I shall be responsible if my application form is rejected for any errors, wrong or incomplete entries made by me in the examination form.</li>
+            <li>I am not admitted to the course after the cut-off date declared by the University for grant of terms.</li>
+            <li>I fulfil all the criteria for the admission in the course as defined by the University and I am not defying the criteria of the admission order.</li>
+          </ol>
+  
+          </div>
+           <!---------DECLARATION BY THE CANDIDATE end-------->
+        <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w30 pull-right mt-10">
+        <p class="border-top text-center">Signature of Candidate in running hand</p>
+        </div>
+        </div>
+        <!---------Date and place end-------->
+   
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION Start-------->
+         <div class="declaration mt-5 font10">
+         <p>I certify:</p>
+          <ol>
+            <li id="m_declaration_gnipst">That Shri/Smt/Kum. --- is a bonafide student of this college, admitted to the ---</li>
+            <li>That the candidate has completed the academic terms to appear in this examination (wherever applicable).</li>
+            <li>That the information furnished by the said candidate is verified from his/her documents and that the candidate is Eligible to appear for University Examination.</li>
+          </ol>
+  
+          </div>
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION end-------->
+ 
+
+ 
+         <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w40 pull-right mt-10">
+        <p class="border-top text-center">Signature &amp; Seal of the Head of the Department/Principal</p>
+        </div>
+        </div>
+</div>
+
+
+     
+     <div id="m_exam_form_footer_gnit" style="display:none">
+ 
+          <!---------DECLARATION BY THE CANDIDATE start-------->
+          <div class="declaration mt-5 font10">
+          <h2>DECLARATION BY THE CANDIDATE</h2>
+          <ol>
+            <li>I am aware that, I have to fulfil criteria of attendance by the University, failing which I shall be held “NOT ELIGIBLE” and will not be allowed to appear inExamination.</li>
+            <li>I hereby declare that I have gone through the syllabus as prescribed and adopted by the University and relevant rules of the Heads of Passing which are applicable forthe examination for which I am appearing and I accept the same without any challenge (wherever applicable).</li>
+            <li>I shall be responsible if my application form is rejected for any errors, wrong or incomplete entries made by me in the examination form.</li>
+            <li>I am not admitted to the course after the cut-off date declared by the University for grant of terms.</li>
+            <li>I fulfil all the criteria for the admission in the course as defined by the University and I am not defying the criteria of the admission order.</li>
+          </ol>
+  
+          </div>
+           <!---------DECLARATION BY THE CANDIDATE end-------->
+        <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w30 pull-right mt-10">
+        <p class="border-top text-center">Signature of Candidate in running hand</p>
+        </div>
+        </div>
+        <!---------Date and place end-------->
+   
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION Start-------->
+         <div class="declaration mt-5 font10">
+         <p>I certify:</p>
+          <ol>
+            <li id="m_declaration_gnit">That Shri/Smt/Kum. ANUSHKA SARKAR is a bonafide student of this college, admitted to the B.TECH - INFORMATION TECHNOLOGY</li>
+            <li>That the candidate has completed the academic terms to appear in this examination (wherever applicable).</li>
+            <li>That the information furnished by the said candidate is verified from his/her documents and that the candidate is Eligible to appear for University Examination.</li>
+          </ol>
+  
+          </div>
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION end-------->
+ 
+
+ 
+         <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w40 pull-right mt-10">
+        <p class="border-top text-center">Signature &amp; Seal of the Head of the Department/Principal</p>
+        </div>
+        </div>
+</div>
+
+
+
+     
+     <div id="m_exam_form_footer_nit" style="display:none">
+ 
+          <!---------DECLARATION BY THE CANDIDATE start-------->
+          <div class="declaration mt-5 font10">
+          <h2>DECLARATION BY THE CANDIDATE</h2>
+          <ol>
+            <li>I am aware that, I have to fulfil criteria of attendance by the University, failing which I shall be held “NOT ELIGIBLE” and will not be allowed to appear inExamination.</li>
+            <li>I hereby declare that I have gone through the syllabus as prescribed and adopted by the University and relevant rules of the Heads of Passing which are applicable forthe examination for which I am appearing and I accept the same without any challenge (wherever applicable).</li>
+            <li>I shall be responsible if my application form is rejected for any errors, wrong or incomplete entries made by me in the examination form.</li>
+            <li>I am not admitted to the course after the cut-off date declared by the University for grant of terms.</li>
+            <li>I fulfil all the criteria for the admission in the course as defined by the University and I am not defying the criteria of the admission order.</li>
+          </ol>
+  
+          </div>
+           <!---------DECLARATION BY THE CANDIDATE end-------->
+        <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w30 pull-right mt-10">
+        <p class="border-top text-center">Signature of Candidate in running hand</p>
+        </div>
+        </div>
+        <!---------Date and place end-------->
+   
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION Start-------->
+         <div class="declaration mt-5 font10">
+         <p>I certify:</p>
+          <ol>
+            <li id="m_declaration_nit">That Shri/Smt/Kum. --- is a bonafide student of this college, admitted to the ---</li>
+            <li>That the candidate has completed the academic terms to appear in this examination (wherever applicable).</li>
+            <li>That the information furnished by the said candidate is verified from his/her documents and that the candidate is Eligible to appear for University Examination.</li>
+          </ol>
+  
+          </div>
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION end-------->
+ 
+
+ 
+         <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w40 pull-right mt-10">
+        <p class="border-top text-center">Signature &amp; Seal of the Head of the Department/Principal</p>
+        </div>
+        </div>
+</div>
+
+
+    
+     <div id="m_exam_form_footer_jisce" style="display:none">
+ 
+          <!---------DECLARATION BY THE CANDIDATE start-------->
+          <div class="declaration mt-5 font10">
+          <h2>DECLARATION BY THE CANDIDATE</h2>
+          <ol>
+            <li>I am aware that, I have to fulfil criteria of attendance by the University, failing which I shall be held “NOT ELIGIBLE” and will not be allowed to appear inExamination.</li>
+            <li>I hereby declare that I have gone through the syllabus as prescribed and adopted by the University and relevant rules of the Heads of Passing which are applicable forthe examination for which I am appearing and I accept the same without any challenge (wherever applicable).</li>
+            <li>I shall be responsible if my application form is rejected for any errors, wrong or incomplete entries made by me in the examination form.</li>
+            <li>I am not admitted to the course after the cut-off date declared by the University for grant of terms.</li>
+            <li>I fulfil all the criteria for the admission in the course as defined by the University and I am not defying the criteria of the admission order.</li>
+          </ol>
+  
+          </div>
+           <!---------DECLARATION BY THE CANDIDATE end-------->
+        <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w30 pull-right mt-10">
+        <p class="border-top text-center">Signature of Candidate in running hand</p>
+        </div>
+        </div>
+        <!---------Date and place end-------->
+   
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION Start-------->
+         <div class="declaration mt-5 font10">
+         <p>I certify:</p>
+          <ol>
+            <li id="m_declaration_jisce">That Shri/Smt/Kum. --- is a bonafide student of this college, admitted to the ---</li>
+            <li>That the candidate has completed the academic terms to appear in this examination (wherever applicable).</li>
+            <li>That the information furnished by the said candidate is verified from his/her documents and that the candidate is Eligible to appear for University Examination.</li>
+          </ol>
+  
+          </div>
+         <!---------CERTIFICATE BY THE HEAD OF INSTITUTION end-------->
+ 
+
+ 
+         <!---------Date and place start-------->
+        <div class="date-place all-clear mt-20">
+        <div class="w30 pull-left ">
+          <p><strong>Date:</strong></p>
+          <p><strong>Place:</strong></p>
+        </div>
+        <div class="w40 pull-right mt-10">
+        <p class="border-top text-center">Signature &amp; Seal of the Head of the Department/Principal</p>
+        </div>
+        </div>
+</div>
+
+
+
+
+<div id="m_enrollment_footer" style="padding-top: 10px;">
+    <div class="declaration mt-5 font10">
+        <h3>INCASE OF ANY DISCREPANCY IN SUBJECT OR PAPER, STUDENT MUST REPORT TO THEIR CONCERNED DEPARTMENT IMMEDIATELY FOR CORRECTION</h3>
+    </div>
+</div>
+
+    <!---------Date and place end-------->
+
+               <div>
+                    <input type="hidden" name="cntxt_nCollegeId" id="cntxt_nCollegeId" value="5">
+                    <input type="hidden" name="cntxt_nStudentId" id="cntxt_nStudentId" value="7247">
+                    <input type="hidden" name="cntxt_nSemId" id="cntxt_nSemId" value="5">
+                    <input type="hidden" name="cntxt_nExamId" id="cntxt_nExamId" value="212">
+                    <input type="hidden" name="cntxt_nExamType" id="cntxt_nExamType" value="1">
+                    <input type="hidden" name="cntxt_application_type" id="cntxt_application_type" value="1">
+                </div>
+ 
+      </div>
+    </page>
+</form>
+
+
+</body></html>

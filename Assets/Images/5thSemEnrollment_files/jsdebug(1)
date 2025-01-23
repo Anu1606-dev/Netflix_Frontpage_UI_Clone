@@ -1,0 +1,88 @@
+var WebServiceReport=function() {
+WebServiceReport.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+WebServiceReport.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return WebServiceReport._staticInstance.get_path();},
+SetReportParam:function(p_ReportFileName,p_SpParam,p_FormulaList,p_SelectionFormula,p_FormatType,succeededCallback, failedCallback, userContext) {
+/// <param name="p_ReportFileName" type="String">System.String</param>
+/// <param name="p_SpParam" type="Array">System.String[]</param>
+/// <param name="p_FormulaList" type="Array">System.String[]</param>
+/// <param name="p_SelectionFormula" type="String">System.String</param>
+/// <param name="p_FormatType" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SetReportParam',false,{p_ReportFileName:p_ReportFileName,p_SpParam:p_SpParam,p_FormulaList:p_FormulaList,p_SelectionFormula:p_SelectionFormula,p_FormatType:p_FormatType},succeededCallback,failedCallback,userContext); },
+SetReportParamMain:function(p_ReportFileName,p_SpParam,p_FormulaList,p_SelectionFormula,p_FormatType,succeededCallback, failedCallback, userContext) {
+/// <param name="p_ReportFileName" type="String">System.String</param>
+/// <param name="p_SpParam" type="Array">System.String[]</param>
+/// <param name="p_FormulaList" type="Array">System.String[]</param>
+/// <param name="p_SelectionFormula" type="String">System.String</param>
+/// <param name="p_FormatType" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SetReportParamMain',false,{p_ReportFileName:p_ReportFileName,p_SpParam:p_SpParam,p_FormulaList:p_FormulaList,p_SelectionFormula:p_SelectionFormula,p_FormatType:p_FormatType},succeededCallback,failedCallback,userContext); }}
+WebServiceReport.registerClass('WebServiceReport',Sys.Net.WebServiceProxy);
+WebServiceReport._staticInstance = new WebServiceReport();
+WebServiceReport.set_path = function(value) {
+WebServiceReport._staticInstance.set_path(value); }
+WebServiceReport.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return WebServiceReport._staticInstance.get_path();}
+WebServiceReport.set_timeout = function(value) {
+WebServiceReport._staticInstance.set_timeout(value); }
+WebServiceReport.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return WebServiceReport._staticInstance.get_timeout(); }
+WebServiceReport.set_defaultUserContext = function(value) { 
+WebServiceReport._staticInstance.set_defaultUserContext(value); }
+WebServiceReport.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return WebServiceReport._staticInstance.get_defaultUserContext(); }
+WebServiceReport.set_defaultSucceededCallback = function(value) { 
+ WebServiceReport._staticInstance.set_defaultSucceededCallback(value); }
+WebServiceReport.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return WebServiceReport._staticInstance.get_defaultSucceededCallback(); }
+WebServiceReport.set_defaultFailedCallback = function(value) { 
+WebServiceReport._staticInstance.set_defaultFailedCallback(value); }
+WebServiceReport.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return WebServiceReport._staticInstance.get_defaultFailedCallback(); }
+WebServiceReport.set_enableJsonp = function(value) { WebServiceReport._staticInstance.set_enableJsonp(value); }
+WebServiceReport.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return WebServiceReport._staticInstance.get_enableJsonp(); }
+WebServiceReport.set_jsonpCallbackParameter = function(value) { WebServiceReport._staticInstance.set_jsonpCallbackParameter(value); }
+WebServiceReport.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return WebServiceReport._staticInstance.get_jsonpCallbackParameter(); }
+WebServiceReport.set_path("/ExamSystemNew/forms/WebServiceReport.asmx");
+WebServiceReport.SetReportParam= function(p_ReportFileName,p_SpParam,p_FormulaList,p_SelectionFormula,p_FormatType,onSuccess,onFailed,userContext) {
+/// <param name="p_ReportFileName" type="String">System.String</param>
+/// <param name="p_SpParam" type="Array">System.String[]</param>
+/// <param name="p_FormulaList" type="Array">System.String[]</param>
+/// <param name="p_SelectionFormula" type="String">System.String</param>
+/// <param name="p_FormatType" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceReport._staticInstance.SetReportParam(p_ReportFileName,p_SpParam,p_FormulaList,p_SelectionFormula,p_FormatType,onSuccess,onFailed,userContext); }
+WebServiceReport.SetReportParamMain= function(p_ReportFileName,p_SpParam,p_FormulaList,p_SelectionFormula,p_FormatType,onSuccess,onFailed,userContext) {
+/// <param name="p_ReportFileName" type="String">System.String</param>
+/// <param name="p_SpParam" type="Array">System.String[]</param>
+/// <param name="p_FormulaList" type="Array">System.String[]</param>
+/// <param name="p_SelectionFormula" type="String">System.String</param>
+/// <param name="p_FormatType" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceReport._staticInstance.SetReportParamMain(p_ReportFileName,p_SpParam,p_FormulaList,p_SelectionFormula,p_FormatType,onSuccess,onFailed,userContext); }

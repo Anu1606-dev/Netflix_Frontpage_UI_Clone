@@ -1,0 +1,477 @@
+var WebServiceMasters=function() {
+WebServiceMasters.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+WebServiceMasters.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return WebServiceMasters._staticInstance.get_path();},
+RemoveSessionVar:function(p_SessionArr,succeededCallback, failedCallback, userContext) {
+/// <param name="p_SessionArr" type="Array">System.String[]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'RemoveSessionVar',false,{p_SessionArr:p_SessionArr},succeededCallback,failedCallback,userContext); },
+RemoveSessionAllVar:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'RemoveSessionAllVar',false,{},succeededCallback,failedCallback,userContext); },
+ResetSessionDataTable:function(p_SessionArr,succeededCallback, failedCallback, userContext) {
+/// <param name="p_SessionArr" type="Array">System.String[]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'ResetSessionDataTable',false,{p_SessionArr:p_SessionArr},succeededCallback,failedCallback,userContext); },
+NavigateList:function(p_session_var_name,p_PageNo,p_field,p_NoOfRec,succeededCallback, failedCallback, userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_PageNo" type="Number">System.Int32</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'NavigateList',false,{p_session_var_name:p_session_var_name,p_PageNo:p_PageNo,p_field:p_field,p_NoOfRec:p_NoOfRec},succeededCallback,failedCallback,userContext); },
+GetData:function(p_session_var_name,p_field,p_ParamList,p_sp_name,p_NoOfRec,succeededCallback, failedCallback, userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetData',false,{p_session_var_name:p_session_var_name,p_field:p_field,p_ParamList:p_ParamList,p_sp_name:p_sp_name,p_NoOfRec:p_NoOfRec},succeededCallback,failedCallback,userContext); },
+GetDataFromDataTable:function(p_master_session_var_name,p_session_var_name,p_field,p_Filter,p_NoOfRec,succeededCallback, failedCallback, userContext) {
+/// <param name="p_master_session_var_name" type="String">System.String</param>
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_Filter" type="String">System.String</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetDataFromDataTable',false,{p_master_session_var_name:p_master_session_var_name,p_session_var_name:p_session_var_name,p_field:p_field,p_Filter:p_Filter,p_NoOfRec:p_NoOfRec},succeededCallback,failedCallback,userContext); },
+GetDataFromMasterDb:function(p_session_var_name,p_field,p_ParamList,p_sp_name,p_NoOfRec,succeededCallback, failedCallback, userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetDataFromMasterDb',false,{p_session_var_name:p_session_var_name,p_field:p_field,p_ParamList:p_ParamList,p_sp_name:p_sp_name,p_NoOfRec:p_NoOfRec},succeededCallback,failedCallback,userContext); },
+SelectBranch:function(p_UserId,p_BranchId,p_BranchName,succeededCallback, failedCallback, userContext) {
+/// <param name="p_UserId" type="String">System.String</param>
+/// <param name="p_BranchId" type="String">System.String</param>
+/// <param name="p_BranchName" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SelectBranch',false,{p_UserId:p_UserId,p_BranchId:p_BranchId,p_BranchName:p_BranchName},succeededCallback,failedCallback,userContext); },
+SelectFinYear:function(p_fin_FinYearId,p_fin_from_date,p_fin_to_date,succeededCallback, failedCallback, userContext) {
+/// <param name="p_fin_FinYearId" type="String">System.String</param>
+/// <param name="p_fin_from_date" type="String">System.String</param>
+/// <param name="p_fin_to_date" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SelectFinYear',false,{p_fin_FinYearId:p_fin_FinYearId,p_fin_from_date:p_fin_from_date,p_fin_to_date:p_fin_to_date},succeededCallback,failedCallback,userContext); },
+SelectModule:function(p_page_name,succeededCallback, failedCallback, userContext) {
+/// <param name="p_page_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SelectModule',false,{p_page_name:p_page_name},succeededCallback,failedCallback,userContext); },
+GetUserRight:function(p_MenuUnqCode,succeededCallback, failedCallback, userContext) {
+/// <param name="p_MenuUnqCode" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetUserRight',false,{p_MenuUnqCode:p_MenuUnqCode},succeededCallback,failedCallback,userContext); },
+PopulateDataTable:function(p_session_var_name,p_ParamList,p_sp_name,p_IsConnectToMasterDb,succeededCallback, failedCallback, userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_IsConnectToMasterDb" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'PopulateDataTable',false,{p_session_var_name:p_session_var_name,p_ParamList:p_ParamList,p_sp_name:p_sp_name,p_IsConnectToMasterDb:p_IsConnectToMasterDb},succeededCallback,failedCallback,userContext); },
+SaveUserWiseMenuAccess:function(p_MenuUnqCode,succeededCallback, failedCallback, userContext) {
+/// <param name="p_MenuUnqCode" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveUserWiseMenuAccess',false,{p_MenuUnqCode:p_MenuUnqCode},succeededCallback,failedCallback,userContext); },
+GetTotalFromDataTable:function(p_FieldList,p_SessionVar,succeededCallback, failedCallback, userContext) {
+/// <param name="p_FieldList" type="Array">System.String[]</param>
+/// <param name="p_SessionVar" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetTotalFromDataTable',false,{p_FieldList:p_FieldList,p_SessionVar:p_SessionVar},succeededCallback,failedCallback,userContext); },
+ExportToExcel:function(p_FileName,p_ParamList,p_sp_name,p_ColName,p_FieldName,p_IsConnectToMasterDb,succeededCallback, failedCallback, userContext) {
+/// <param name="p_FileName" type="String">System.String</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_ColName" type="String">System.String</param>
+/// <param name="p_FieldName" type="String">System.String</param>
+/// <param name="p_IsConnectToMasterDb" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'ExportToExcel',false,{p_FileName:p_FileName,p_ParamList:p_ParamList,p_sp_name:p_sp_name,p_ColName:p_ColName,p_FieldName:p_FieldName,p_IsConnectToMasterDb:p_IsConnectToMasterDb},succeededCallback,failedCallback,userContext); },
+SaveUserPassWord:function(p_OldPassWord,p_NewPassWord,succeededCallback, failedCallback, userContext) {
+/// <param name="p_OldPassWord" type="String">System.String</param>
+/// <param name="p_NewPassWord" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveUserPassWord',false,{p_OldPassWord:p_OldPassWord,p_NewPassWord:p_NewPassWord},succeededCallback,failedCallback,userContext); },
+SetUniqueRowNo:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SetUniqueRowNo',false,{},succeededCallback,failedCallback,userContext); },
+SetUniqueRowNoFromCdgen:function(p_type,succeededCallback, failedCallback, userContext) {
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SetUniqueRowNoFromCdgen',false,{p_type:p_type},succeededCallback,failedCallback,userContext); },
+UpdateCurrentValue:function(p_from_date,p_to_date,succeededCallback, failedCallback, userContext) {
+/// <param name="p_from_date" type="String">System.String</param>
+/// <param name="p_to_date" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'UpdateCurrentValue',false,{p_from_date:p_from_date,p_to_date:p_to_date},succeededCallback,failedCallback,userContext); },
+UpdateLastYearAccBal:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'UpdateLastYearAccBal',false,{},succeededCallback,failedCallback,userContext); },
+UpdateLastItemBal:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'UpdateLastItemBal',false,{},succeededCallback,failedCallback,userContext); },
+CreateSessionVar:function(p_var_name,p_var_val,succeededCallback, failedCallback, userContext) {
+/// <param name="p_var_name" type="Array">System.String[]</param>
+/// <param name="p_var_val" type="Array">System.String[]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'CreateSessionVar',false,{p_var_name:p_var_name,p_var_val:p_var_val},succeededCallback,failedCallback,userContext); },
+GetDataAsArrayWithFieldName:function(p_ParamList,p_sp_name,p_IsMainDb,succeededCallback, failedCallback, userContext) {
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_IsMainDb" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetDataAsArrayWithFieldName',false,{p_ParamList:p_ParamList,p_sp_name:p_sp_name,p_IsMainDb:p_IsMainDb},succeededCallback,failedCallback,userContext); },
+GetDataFromExcel:function(p_file_name,succeededCallback, failedCallback, userContext) {
+/// <param name="p_file_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetDataFromExcel',false,{p_file_name:p_file_name},succeededCallback,failedCallback,userContext); },
+SaveExcelFileLog:function(p_file_name,succeededCallback, failedCallback, userContext) {
+/// <param name="p_file_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveExcelFileLog',false,{p_file_name:p_file_name},succeededCallback,failedCallback,userContext); },
+SaveStudentListForDigitalEvaluation:function(p_file_name,succeededCallback, failedCallback, userContext) {
+/// <param name="p_file_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveStudentListForDigitalEvaluation',false,{p_file_name:p_file_name},succeededCallback,failedCallback,userContext); },
+UpdateEvaluatedMarks:function(p_exam_id,p_sem_no,p_sub_code,p_year,p_type,succeededCallback, failedCallback, userContext) {
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_sem_no" type="String">System.String</param>
+/// <param name="p_sub_code" type="String">System.String</param>
+/// <param name="p_year" type="String">System.String</param>
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'UpdateEvaluatedMarks',false,{p_exam_id:p_exam_id,p_sem_no:p_sem_no,p_sub_code:p_sub_code,p_year:p_year,p_type:p_type},succeededCallback,failedCallback,userContext); },
+FinalizeMarks:function(p_exam_id,p_course_id,p_stream_id,p_batch_id,p_sem_id,succeededCallback, failedCallback, userContext) {
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_course_id" type="String">System.String</param>
+/// <param name="p_stream_id" type="String">System.String</param>
+/// <param name="p_batch_id" type="String">System.String</param>
+/// <param name="p_sem_id" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'FinalizeMarks',false,{p_exam_id:p_exam_id,p_course_id:p_course_id,p_stream_id:p_stream_id,p_batch_id:p_batch_id,p_sem_id:p_sem_id},succeededCallback,failedCallback,userContext); },
+SyncReviewFees:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SyncReviewFees',false,{},succeededCallback,failedCallback,userContext); }}
+WebServiceMasters.registerClass('WebServiceMasters',Sys.Net.WebServiceProxy);
+WebServiceMasters._staticInstance = new WebServiceMasters();
+WebServiceMasters.set_path = function(value) {
+WebServiceMasters._staticInstance.set_path(value); }
+WebServiceMasters.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return WebServiceMasters._staticInstance.get_path();}
+WebServiceMasters.set_timeout = function(value) {
+WebServiceMasters._staticInstance.set_timeout(value); }
+WebServiceMasters.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return WebServiceMasters._staticInstance.get_timeout(); }
+WebServiceMasters.set_defaultUserContext = function(value) { 
+WebServiceMasters._staticInstance.set_defaultUserContext(value); }
+WebServiceMasters.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return WebServiceMasters._staticInstance.get_defaultUserContext(); }
+WebServiceMasters.set_defaultSucceededCallback = function(value) { 
+ WebServiceMasters._staticInstance.set_defaultSucceededCallback(value); }
+WebServiceMasters.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return WebServiceMasters._staticInstance.get_defaultSucceededCallback(); }
+WebServiceMasters.set_defaultFailedCallback = function(value) { 
+WebServiceMasters._staticInstance.set_defaultFailedCallback(value); }
+WebServiceMasters.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return WebServiceMasters._staticInstance.get_defaultFailedCallback(); }
+WebServiceMasters.set_enableJsonp = function(value) { WebServiceMasters._staticInstance.set_enableJsonp(value); }
+WebServiceMasters.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return WebServiceMasters._staticInstance.get_enableJsonp(); }
+WebServiceMasters.set_jsonpCallbackParameter = function(value) { WebServiceMasters._staticInstance.set_jsonpCallbackParameter(value); }
+WebServiceMasters.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return WebServiceMasters._staticInstance.get_jsonpCallbackParameter(); }
+WebServiceMasters.set_path("/ExamSystemNew/forms/WebServiceMasters.asmx");
+WebServiceMasters.RemoveSessionVar= function(p_SessionArr,onSuccess,onFailed,userContext) {
+/// <param name="p_SessionArr" type="Array">System.String[]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.RemoveSessionVar(p_SessionArr,onSuccess,onFailed,userContext); }
+WebServiceMasters.RemoveSessionAllVar= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.RemoveSessionAllVar(onSuccess,onFailed,userContext); }
+WebServiceMasters.ResetSessionDataTable= function(p_SessionArr,onSuccess,onFailed,userContext) {
+/// <param name="p_SessionArr" type="Array">System.String[]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.ResetSessionDataTable(p_SessionArr,onSuccess,onFailed,userContext); }
+WebServiceMasters.NavigateList= function(p_session_var_name,p_PageNo,p_field,p_NoOfRec,onSuccess,onFailed,userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_PageNo" type="Number">System.Int32</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.NavigateList(p_session_var_name,p_PageNo,p_field,p_NoOfRec,onSuccess,onFailed,userContext); }
+WebServiceMasters.GetData= function(p_session_var_name,p_field,p_ParamList,p_sp_name,p_NoOfRec,onSuccess,onFailed,userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.GetData(p_session_var_name,p_field,p_ParamList,p_sp_name,p_NoOfRec,onSuccess,onFailed,userContext); }
+WebServiceMasters.GetDataFromDataTable= function(p_master_session_var_name,p_session_var_name,p_field,p_Filter,p_NoOfRec,onSuccess,onFailed,userContext) {
+/// <param name="p_master_session_var_name" type="String">System.String</param>
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_Filter" type="String">System.String</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.GetDataFromDataTable(p_master_session_var_name,p_session_var_name,p_field,p_Filter,p_NoOfRec,onSuccess,onFailed,userContext); }
+WebServiceMasters.GetDataFromMasterDb= function(p_session_var_name,p_field,p_ParamList,p_sp_name,p_NoOfRec,onSuccess,onFailed,userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_field" type="Array">System.String[]</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_NoOfRec" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.GetDataFromMasterDb(p_session_var_name,p_field,p_ParamList,p_sp_name,p_NoOfRec,onSuccess,onFailed,userContext); }
+WebServiceMasters.SelectBranch= function(p_UserId,p_BranchId,p_BranchName,onSuccess,onFailed,userContext) {
+/// <param name="p_UserId" type="String">System.String</param>
+/// <param name="p_BranchId" type="String">System.String</param>
+/// <param name="p_BranchName" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SelectBranch(p_UserId,p_BranchId,p_BranchName,onSuccess,onFailed,userContext); }
+WebServiceMasters.SelectFinYear= function(p_fin_FinYearId,p_fin_from_date,p_fin_to_date,onSuccess,onFailed,userContext) {
+/// <param name="p_fin_FinYearId" type="String">System.String</param>
+/// <param name="p_fin_from_date" type="String">System.String</param>
+/// <param name="p_fin_to_date" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SelectFinYear(p_fin_FinYearId,p_fin_from_date,p_fin_to_date,onSuccess,onFailed,userContext); }
+WebServiceMasters.SelectModule= function(p_page_name,onSuccess,onFailed,userContext) {
+/// <param name="p_page_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SelectModule(p_page_name,onSuccess,onFailed,userContext); }
+WebServiceMasters.GetUserRight= function(p_MenuUnqCode,onSuccess,onFailed,userContext) {
+/// <param name="p_MenuUnqCode" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.GetUserRight(p_MenuUnqCode,onSuccess,onFailed,userContext); }
+WebServiceMasters.PopulateDataTable= function(p_session_var_name,p_ParamList,p_sp_name,p_IsConnectToMasterDb,onSuccess,onFailed,userContext) {
+/// <param name="p_session_var_name" type="String">System.String</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_IsConnectToMasterDb" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.PopulateDataTable(p_session_var_name,p_ParamList,p_sp_name,p_IsConnectToMasterDb,onSuccess,onFailed,userContext); }
+WebServiceMasters.SaveUserWiseMenuAccess= function(p_MenuUnqCode,onSuccess,onFailed,userContext) {
+/// <param name="p_MenuUnqCode" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SaveUserWiseMenuAccess(p_MenuUnqCode,onSuccess,onFailed,userContext); }
+WebServiceMasters.GetTotalFromDataTable= function(p_FieldList,p_SessionVar,onSuccess,onFailed,userContext) {
+/// <param name="p_FieldList" type="Array">System.String[]</param>
+/// <param name="p_SessionVar" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.GetTotalFromDataTable(p_FieldList,p_SessionVar,onSuccess,onFailed,userContext); }
+WebServiceMasters.ExportToExcel= function(p_FileName,p_ParamList,p_sp_name,p_ColName,p_FieldName,p_IsConnectToMasterDb,onSuccess,onFailed,userContext) {
+/// <param name="p_FileName" type="String">System.String</param>
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_ColName" type="String">System.String</param>
+/// <param name="p_FieldName" type="String">System.String</param>
+/// <param name="p_IsConnectToMasterDb" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.ExportToExcel(p_FileName,p_ParamList,p_sp_name,p_ColName,p_FieldName,p_IsConnectToMasterDb,onSuccess,onFailed,userContext); }
+WebServiceMasters.SaveUserPassWord= function(p_OldPassWord,p_NewPassWord,onSuccess,onFailed,userContext) {
+/// <param name="p_OldPassWord" type="String">System.String</param>
+/// <param name="p_NewPassWord" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SaveUserPassWord(p_OldPassWord,p_NewPassWord,onSuccess,onFailed,userContext); }
+WebServiceMasters.SetUniqueRowNo= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SetUniqueRowNo(onSuccess,onFailed,userContext); }
+WebServiceMasters.SetUniqueRowNoFromCdgen= function(p_type,onSuccess,onFailed,userContext) {
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SetUniqueRowNoFromCdgen(p_type,onSuccess,onFailed,userContext); }
+WebServiceMasters.UpdateCurrentValue= function(p_from_date,p_to_date,onSuccess,onFailed,userContext) {
+/// <param name="p_from_date" type="String">System.String</param>
+/// <param name="p_to_date" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.UpdateCurrentValue(p_from_date,p_to_date,onSuccess,onFailed,userContext); }
+WebServiceMasters.UpdateLastYearAccBal= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.UpdateLastYearAccBal(onSuccess,onFailed,userContext); }
+WebServiceMasters.UpdateLastItemBal= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.UpdateLastItemBal(onSuccess,onFailed,userContext); }
+WebServiceMasters.CreateSessionVar= function(p_var_name,p_var_val,onSuccess,onFailed,userContext) {
+/// <param name="p_var_name" type="Array">System.String[]</param>
+/// <param name="p_var_val" type="Array">System.String[]</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.CreateSessionVar(p_var_name,p_var_val,onSuccess,onFailed,userContext); }
+WebServiceMasters.GetDataAsArrayWithFieldName= function(p_ParamList,p_sp_name,p_IsMainDb,onSuccess,onFailed,userContext) {
+/// <param name="p_ParamList" type="Array">System.String[]</param>
+/// <param name="p_sp_name" type="String">System.String</param>
+/// <param name="p_IsMainDb" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.GetDataAsArrayWithFieldName(p_ParamList,p_sp_name,p_IsMainDb,onSuccess,onFailed,userContext); }
+WebServiceMasters.GetDataFromExcel= function(p_file_name,onSuccess,onFailed,userContext) {
+/// <param name="p_file_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.GetDataFromExcel(p_file_name,onSuccess,onFailed,userContext); }
+WebServiceMasters.SaveExcelFileLog= function(p_file_name,onSuccess,onFailed,userContext) {
+/// <param name="p_file_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SaveExcelFileLog(p_file_name,onSuccess,onFailed,userContext); }
+WebServiceMasters.SaveStudentListForDigitalEvaluation= function(p_file_name,onSuccess,onFailed,userContext) {
+/// <param name="p_file_name" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SaveStudentListForDigitalEvaluation(p_file_name,onSuccess,onFailed,userContext); }
+WebServiceMasters.UpdateEvaluatedMarks= function(p_exam_id,p_sem_no,p_sub_code,p_year,p_type,onSuccess,onFailed,userContext) {
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_sem_no" type="String">System.String</param>
+/// <param name="p_sub_code" type="String">System.String</param>
+/// <param name="p_year" type="String">System.String</param>
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.UpdateEvaluatedMarks(p_exam_id,p_sem_no,p_sub_code,p_year,p_type,onSuccess,onFailed,userContext); }
+WebServiceMasters.FinalizeMarks= function(p_exam_id,p_course_id,p_stream_id,p_batch_id,p_sem_id,onSuccess,onFailed,userContext) {
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_course_id" type="String">System.String</param>
+/// <param name="p_stream_id" type="String">System.String</param>
+/// <param name="p_batch_id" type="String">System.String</param>
+/// <param name="p_sem_id" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.FinalizeMarks(p_exam_id,p_course_id,p_stream_id,p_batch_id,p_sem_id,onSuccess,onFailed,userContext); }
+WebServiceMasters.SyncReviewFees= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceMasters._staticInstance.SyncReviewFees(onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+if (typeof(ReturnList) === 'undefined') {
+var ReturnList=gtc("ReturnList");
+ReturnList.registerClass('ReturnList');
+}
+if (typeof(ReturnListWithField) === 'undefined') {
+var ReturnListWithField=gtc("ReturnListWithField");
+ReturnListWithField.registerClass('ReturnListWithField');
+}

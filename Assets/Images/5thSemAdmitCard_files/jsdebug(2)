@@ -1,0 +1,172 @@
+var WebServiceStdExamForm=function() {
+WebServiceStdExamForm.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+WebServiceStdExamForm.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return WebServiceStdExamForm._staticInstance.get_path();},
+SaveSubjectId:function(p_app,p_sub_id,succeededCallback, failedCallback, userContext) {
+/// <param name="p_app" type="String">System.String</param>
+/// <param name="p_sub_id" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveSubjectId',false,{p_app:p_app,p_sub_id:p_sub_id},succeededCallback,failedCallback,userContext); },
+SaveData:function(p_college_id,p_course_id,p_stream_id,p_batch_id,p_exam_id,p_sem_id,p_student_id,p_type,p_due_amt,p_add,p_contact,p_email,p_std_attd,p_gur_name,p_blood_group,p_dob,p_application_type,succeededCallback, failedCallback, userContext) {
+/// <param name="p_college_id" type="String">System.String</param>
+/// <param name="p_course_id" type="String">System.String</param>
+/// <param name="p_stream_id" type="String">System.String</param>
+/// <param name="p_batch_id" type="String">System.String</param>
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_sem_id" type="String">System.String</param>
+/// <param name="p_student_id" type="String">System.String</param>
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="p_due_amt" type="String">System.String</param>
+/// <param name="p_add" type="String">System.String</param>
+/// <param name="p_contact" type="String">System.String</param>
+/// <param name="p_email" type="String">System.String</param>
+/// <param name="p_std_attd" type="String">System.String</param>
+/// <param name="p_gur_name" type="String">System.String</param>
+/// <param name="p_blood_group" type="String">System.String</param>
+/// <param name="p_dob" type="String">System.String</param>
+/// <param name="p_application_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveData',false,{p_college_id:p_college_id,p_course_id:p_course_id,p_stream_id:p_stream_id,p_batch_id:p_batch_id,p_exam_id:p_exam_id,p_sem_id:p_sem_id,p_student_id:p_student_id,p_type:p_type,p_due_amt:p_due_amt,p_add:p_add,p_contact:p_contact,p_email:p_email,p_std_attd:p_std_attd,p_gur_name:p_gur_name,p_blood_group:p_blood_group,p_dob:p_dob,p_application_type:p_application_type},succeededCallback,failedCallback,userContext); },
+SaveApprovalData:function(p_college_id,p_exam_id,p_exam_type,p_app_type,p_student_id,p_reason,p_sem_id,succeededCallback, failedCallback, userContext) {
+/// <param name="p_college_id" type="String">System.String</param>
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_exam_type" type="String">System.String</param>
+/// <param name="p_app_type" type="String">System.String</param>
+/// <param name="p_student_id" type="String">System.String</param>
+/// <param name="p_reason" type="String">System.String</param>
+/// <param name="p_sem_id" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveApprovalData',false,{p_college_id:p_college_id,p_exam_id:p_exam_id,p_exam_type:p_exam_type,p_app_type:p_app_type,p_student_id:p_student_id,p_reason:p_reason,p_sem_id:p_sem_id},succeededCallback,failedCallback,userContext); },
+SaveSubject:function(p_app,p_sub_id,p_sub_code,p_type,succeededCallback, failedCallback, userContext) {
+/// <param name="p_app" type="String">System.String</param>
+/// <param name="p_sub_id" type="String">System.String</param>
+/// <param name="p_sub_code" type="String">System.String</param>
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveSubject',false,{p_app:p_app,p_sub_id:p_sub_id,p_sub_code:p_sub_code,p_type:p_type},succeededCallback,failedCallback,userContext); },
+SaveReviewFormData:function(p_college_id,p_course_id,p_stream_id,p_batch_id,p_exam_id,p_student_id,p_contact,succeededCallback, failedCallback, userContext) {
+/// <param name="p_college_id" type="String">System.String</param>
+/// <param name="p_course_id" type="String">System.String</param>
+/// <param name="p_stream_id" type="String">System.String</param>
+/// <param name="p_batch_id" type="String">System.String</param>
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_student_id" type="String">System.String</param>
+/// <param name="p_contact" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveReviewFormData',false,{p_college_id:p_college_id,p_course_id:p_course_id,p_stream_id:p_stream_id,p_batch_id:p_batch_id,p_exam_id:p_exam_id,p_student_id:p_student_id,p_contact:p_contact},succeededCallback,failedCallback,userContext); }}
+WebServiceStdExamForm.registerClass('WebServiceStdExamForm',Sys.Net.WebServiceProxy);
+WebServiceStdExamForm._staticInstance = new WebServiceStdExamForm();
+WebServiceStdExamForm.set_path = function(value) {
+WebServiceStdExamForm._staticInstance.set_path(value); }
+WebServiceStdExamForm.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return WebServiceStdExamForm._staticInstance.get_path();}
+WebServiceStdExamForm.set_timeout = function(value) {
+WebServiceStdExamForm._staticInstance.set_timeout(value); }
+WebServiceStdExamForm.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return WebServiceStdExamForm._staticInstance.get_timeout(); }
+WebServiceStdExamForm.set_defaultUserContext = function(value) { 
+WebServiceStdExamForm._staticInstance.set_defaultUserContext(value); }
+WebServiceStdExamForm.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return WebServiceStdExamForm._staticInstance.get_defaultUserContext(); }
+WebServiceStdExamForm.set_defaultSucceededCallback = function(value) { 
+ WebServiceStdExamForm._staticInstance.set_defaultSucceededCallback(value); }
+WebServiceStdExamForm.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return WebServiceStdExamForm._staticInstance.get_defaultSucceededCallback(); }
+WebServiceStdExamForm.set_defaultFailedCallback = function(value) { 
+WebServiceStdExamForm._staticInstance.set_defaultFailedCallback(value); }
+WebServiceStdExamForm.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return WebServiceStdExamForm._staticInstance.get_defaultFailedCallback(); }
+WebServiceStdExamForm.set_enableJsonp = function(value) { WebServiceStdExamForm._staticInstance.set_enableJsonp(value); }
+WebServiceStdExamForm.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return WebServiceStdExamForm._staticInstance.get_enableJsonp(); }
+WebServiceStdExamForm.set_jsonpCallbackParameter = function(value) { WebServiceStdExamForm._staticInstance.set_jsonpCallbackParameter(value); }
+WebServiceStdExamForm.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return WebServiceStdExamForm._staticInstance.get_jsonpCallbackParameter(); }
+WebServiceStdExamForm.set_path("/ExamSystemNew/forms/WebServiceStdExamForm.asmx");
+WebServiceStdExamForm.SaveSubjectId= function(p_app,p_sub_id,onSuccess,onFailed,userContext) {
+/// <param name="p_app" type="String">System.String</param>
+/// <param name="p_sub_id" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceStdExamForm._staticInstance.SaveSubjectId(p_app,p_sub_id,onSuccess,onFailed,userContext); }
+WebServiceStdExamForm.SaveData= function(p_college_id,p_course_id,p_stream_id,p_batch_id,p_exam_id,p_sem_id,p_student_id,p_type,p_due_amt,p_add,p_contact,p_email,p_std_attd,p_gur_name,p_blood_group,p_dob,p_application_type,onSuccess,onFailed,userContext) {
+/// <param name="p_college_id" type="String">System.String</param>
+/// <param name="p_course_id" type="String">System.String</param>
+/// <param name="p_stream_id" type="String">System.String</param>
+/// <param name="p_batch_id" type="String">System.String</param>
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_sem_id" type="String">System.String</param>
+/// <param name="p_student_id" type="String">System.String</param>
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="p_due_amt" type="String">System.String</param>
+/// <param name="p_add" type="String">System.String</param>
+/// <param name="p_contact" type="String">System.String</param>
+/// <param name="p_email" type="String">System.String</param>
+/// <param name="p_std_attd" type="String">System.String</param>
+/// <param name="p_gur_name" type="String">System.String</param>
+/// <param name="p_blood_group" type="String">System.String</param>
+/// <param name="p_dob" type="String">System.String</param>
+/// <param name="p_application_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceStdExamForm._staticInstance.SaveData(p_college_id,p_course_id,p_stream_id,p_batch_id,p_exam_id,p_sem_id,p_student_id,p_type,p_due_amt,p_add,p_contact,p_email,p_std_attd,p_gur_name,p_blood_group,p_dob,p_application_type,onSuccess,onFailed,userContext); }
+WebServiceStdExamForm.SaveApprovalData= function(p_college_id,p_exam_id,p_exam_type,p_app_type,p_student_id,p_reason,p_sem_id,onSuccess,onFailed,userContext) {
+/// <param name="p_college_id" type="String">System.String</param>
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_exam_type" type="String">System.String</param>
+/// <param name="p_app_type" type="String">System.String</param>
+/// <param name="p_student_id" type="String">System.String</param>
+/// <param name="p_reason" type="String">System.String</param>
+/// <param name="p_sem_id" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceStdExamForm._staticInstance.SaveApprovalData(p_college_id,p_exam_id,p_exam_type,p_app_type,p_student_id,p_reason,p_sem_id,onSuccess,onFailed,userContext); }
+WebServiceStdExamForm.SaveSubject= function(p_app,p_sub_id,p_sub_code,p_type,onSuccess,onFailed,userContext) {
+/// <param name="p_app" type="String">System.String</param>
+/// <param name="p_sub_id" type="String">System.String</param>
+/// <param name="p_sub_code" type="String">System.String</param>
+/// <param name="p_type" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceStdExamForm._staticInstance.SaveSubject(p_app,p_sub_id,p_sub_code,p_type,onSuccess,onFailed,userContext); }
+WebServiceStdExamForm.SaveReviewFormData= function(p_college_id,p_course_id,p_stream_id,p_batch_id,p_exam_id,p_student_id,p_contact,onSuccess,onFailed,userContext) {
+/// <param name="p_college_id" type="String">System.String</param>
+/// <param name="p_course_id" type="String">System.String</param>
+/// <param name="p_stream_id" type="String">System.String</param>
+/// <param name="p_batch_id" type="String">System.String</param>
+/// <param name="p_exam_id" type="String">System.String</param>
+/// <param name="p_student_id" type="String">System.String</param>
+/// <param name="p_contact" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+WebServiceStdExamForm._staticInstance.SaveReviewFormData(p_college_id,p_course_id,p_stream_id,p_batch_id,p_exam_id,p_student_id,p_contact,onSuccess,onFailed,userContext); }

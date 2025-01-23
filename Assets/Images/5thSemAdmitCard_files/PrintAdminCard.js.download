@@ -1,0 +1,195 @@
+﻿var FieldArray = new Array();
+var m_exam_type = "Regular";
+
+
+//--------------------------------------
+function Init() {
+    try {
+        cntxt_nCollegeId = GetValueByCtrlName("cntxt_nCollegeId");
+
+        if (cntxt_nCollegeId == "5") {
+            document.getElementById('img_college').src = "assets\\img\\college\\gnit.png";
+            document.getElementById('img_coe_sig').src = "assets\\img\\avatars\\admit-sign-gnit.PNG";
+            SetInnerHtml("m_college_name", "Guru Nanak Institute of Technology");
+            SetInnerHtml("coe_sig_college", "Guru Nanak Institute of Technology");
+            
+        }
+        else if (cntxt_nCollegeId == "2") {
+            document.getElementById('img_college').src = "assets\\img\\college\\nit.png";
+            document.getElementById('img_coe_sig').src = "assets\\img\\avatars\\admit-sign-nit.jpg";
+            SetInnerHtml("m_college_name", "Narula Institute of Technology");
+            SetInnerHtml("coe_sig_college", "Narula Institute of Technology");
+        }
+        else if (cntxt_nCollegeId == "3") {
+            document.getElementById('img_college').src = "assets\\img\\college\\gnipst.png";
+            document.getElementById('img_coe_sig').src = "assets\\img\\avatars\\admit-sign-gnipst.jpg";
+            SetInnerHtml("m_college_name", "Guru Nanak Institute of Pharmaceutical Science & Technology");
+            SetInnerHtml("coe_sig_college", "Guru Nanak Institute of Pharmaceutical Science & Technology");
+        }
+        else if (cntxt_nCollegeId == "1") {
+            document.getElementById('img_college').src = "assets\\img\\college\\jisce.png";
+            document.getElementById('img_coe_sig').src = "assets\\img\\avatars\\admit-sign-jisce.png";
+            SetInnerHtml("m_college_name", "JIS College of Engineering");
+             SetInnerHtml("coe_sig_college", "JIS College of Engineering");
+        }
+        else if (cntxt_nCollegeId == "9") {
+            document.getElementById('img_college').src = "assets\\img\\college\\jisulogo.png";
+            document.getElementById('img_coe_sig').src = "assets\\img\\avatars\\admit-sign-jisu.png";
+            SetInnerHtml("m_college_name", "JIS University");
+            SetInnerHtml("coe_sig_college", "JIS University");
+        }
+
+
+        FieldArray.push("course_name");
+        FieldArray.push("stream_name");
+        FieldArray.push("exam_name");
+        FieldArray.push("std_roll");
+        FieldArray.push("std_name");
+        FieldArray.push("father_name");
+        FieldArray.push("secret_code");
+        FieldArray.push("exam_name");
+        FieldArray.push("std_reg");
+        FieldArray.push("sub_code");
+        FieldArray.push("sub_name");
+        FieldArray.push("exam_date");
+        FieldArray.push("exem_time");
+
+        cntxt_nCollegeId = GetValueByCtrlName("cntxt_nCollegeId");
+        cntxt_nExamId = GetValueByCtrlName("cntxt_nExamId");
+        cntxt_nStudentId = GetValueByCtrlName("cntxt_nStudentId");
+        cntxt_nType = GetValueByCtrlName("cntxt_nExamType");
+        cntxt_nSemId = GetValueByCtrlName("cntxt_nSemId");
+
+        if (parseFloat(cntxt_nType) != 1) {
+            m_exam_type = "Backlog";
+        }
+
+        var m_sp_param = new Array();
+
+
+
+        m_sp_param.push("@p_college_id,INT," + cntxt_nCollegeId);
+        m_sp_param.push("@p_std_id,INT," + cntxt_nStudentId);
+        m_sp_param.push("@p_exam_id,INT," + cntxt_nExamId);
+        m_sp_param.push("@p_type,INT," + cntxt_nType);
+        m_sp_param.push("@p_sem_id,INT," + cntxt_nSemId);
+
+
+
+
+        WebServiceMasters.GetData("NA", FieldArray, m_sp_param,
+                                  "Proc_Disp_Admit_Card", 0,
+                                   OnComplete_Init,
+                                   OnError_Init,
+                                   OnTimeOut_Init);
+
+    }
+    catch (err) {
+        alert("Java Script Error - Init");
+    }
+
+}
+function OnComplete_Init(arg) {
+    if (parseFloat(arg.m_Count) > -1) {
+        PrintAdminCard(arg.m_List);
+    }
+    else {
+        alert("No Data Found");
+    }
+}
+function OnError_Init(arg) {
+    alert("error has occured: " + arg._message);
+}
+function OnTimeOut_Init(arg) {
+    alert("Time Out");
+}
+//--------------------------------------
+
+function PrintAdminCard(p_arr) {
+    try {
+        m_course_name = p_arr[0][GetArrayRowIndex(FieldArray, "course_name")]
+        m_stream_name = p_arr[0][GetArrayRowIndex(FieldArray, "stream_name")]
+        m_exam_name = p_arr[0][GetArrayRowIndex(FieldArray, "exam_name")]
+        m_std_roll = p_arr[0][GetArrayRowIndex(FieldArray, "std_roll")]
+        m_reg_no = p_arr[0][GetArrayRowIndex(FieldArray, "std_reg")]
+
+        m_std_name = p_arr[0][GetArrayRowIndex(FieldArray, "std_name")]
+        m_gur_name = p_arr[0][GetArrayRowIndex(FieldArray, "father_name")]
+        m_secret_code = p_arr[0][GetArrayRowIndex(FieldArray, "secret_code")]
+        m_exam_name = p_arr[0][GetArrayRowIndex(FieldArray, "exam_name")]
+
+
+
+        SetInnerHtml("ctxt_course_stream", m_course_name + " - " + m_stream_name + " [" + m_exam_name +"]");
+        SetInnerHtml("ctxt_exam_type", m_exam_type);
+        SetInnerHtml("ctxt_roll", m_std_roll);
+        SetInnerHtml("ctxt_exam_seat_no", m_std_roll); //m_secret_code
+        SetInnerHtml("ctxt_stream", m_stream_name);
+        SetInnerHtml("ctxt_student_name", m_std_name);
+        SetInnerHtml("ctxt_gurdian_name", m_gur_name);
+        SetInnerHtml("ctxt_reg_no", m_reg_no);
+
+        
+
+        m_html = "";
+        var m_sl = 1;
+        for (i = 0; i < p_arr.length; i++) {
+            m_sub_code = p_arr[i][GetArrayRowIndex(FieldArray, "sub_code")]
+            m_sub_name = p_arr[i][GetArrayRowIndex(FieldArray, "sub_name")]
+            m_exam_date = p_arr[i][GetArrayRowIndex(FieldArray, "exam_date")]
+            m_exem_time = p_arr[i][GetArrayRowIndex(FieldArray, "exem_time")]
+            m_html_temp = "<tr><td>" + m_sl.toString() + "</td><td>" + m_sub_code + "</td><td>" + m_sub_name + "</td><td>" + m_exam_date +"</td><td>" + m_exem_time + "</td><td>" + "   "+  "</td></tr>";
+            m_html = m_html + m_html_temp;
+
+            m_sl = m_sl + 1;
+        }
+
+        SetInnerHtml("m_subject_list", m_html);
+
+        cntxt_nCollegeId = GetValueByCtrlName("cntxt_nCollegeId");
+        if (cntxt_nCollegeId == "5") {
+            m_path = "GNIT\\"
+        }
+        else if (cntxt_nCollegeId == "2") {
+            m_path = "NIT\\"
+        }
+        else if (cntxt_nCollegeId == "3") {
+            m_path = "GNIPST\\"
+
+        }
+        else if (cntxt_nCollegeId == "1") {
+            m_path = "JISCE\\"
+
+        }
+        else if (cntxt_nCollegeId == "9") {
+            m_path = "JISU\\"
+
+        }
+
+
+
+        m_std_id = GetValueByCtrlName("cntxt_nStudentId");
+        m_image = "..\\StudentImage\\" + m_path + m_std_id + "_profile.jpg";
+        document.getElementById("img_profile").src = m_image;
+
+        m_image = "..\\StudentImage\\" + m_path + m_std_id + "_sig.jpg";
+        document.getElementById("img_sig").src = m_image;
+
+        m_image = "..\\QrCode\\" + m_path + m_std_roll + "_qr.jpg";
+        document.getElementById("img_qr").src = m_image;
+
+
+
+
+    }
+    catch (err) {
+        alert("Java Script Error - PrintAdminCard");
+    }
+}
+
+
+function PrintDoc() {
+    ShowHideControl("cmd_print", 0);
+    window.print();
+    ShowHideControl("cmd_print", 1);
+}

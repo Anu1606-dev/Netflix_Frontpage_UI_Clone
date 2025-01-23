@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://www.jisexam.org/ExamSystemNew/forms/frmPrintAdmitCard.aspx -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Untitled Document</title>
+<style>
+    
+@media print{ 
+  @page {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}  
+
+    
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body {
+    font-family: Calibri;
+    background: rgb(204,204,204);
+    font-size: 12px;
+    line-height: 16px;
+}
+page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    /*margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);*/
+}
+page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+}
+.main {
+    padding: 20px 30px;
+}
+.all-clear:after, .all-clear:before, .part:after, .part:before, .all-clear:after, .all-clear:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+.part {
+    display: flex;/* important */
+    align-items: stretch;
+}
+.pull-left {
+    float: left
+}
+.pull-right {
+    float: right
+}
+.border {
+    border: 1px solid #333;
+}
+.border-bottom {
+    border-bottom: 1px solid #333;
+}
+.border-top {
+    border-top: 1px solid #333;
+}
+.pl-10 {
+    padding-left: 10px;
+}
+.pr-10 {
+    padding-right: 10px;
+}
+.p-10 {
+    padding: 10px;
+}
+.p-5 {
+    padding: 5px;
+}
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.lineheight-16 {
+}
+.heading {
+    width: 30%;
+    flex: 1
+}
+.heading-details:before {
+    content: "\003A";
+    margin-right: 10px;
+    min-height: 100%;
+}
+.heading-details {
+    width: 70%;
+    align-items: flex-start;
+}
+.d-inline-block {
+    display: inline-block!important;
+}
+fieldset {
+    border: 1px solid white;
+}
+legend {
+    padding: 0 10px;
+}
+.h2 {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600
+}
+h2 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600
+}
+.w20 {
+    width: 20%;
+}
+.w80 {
+    width: 80%;
+}
+.w30 {
+    width: 30%;
+}
+.w70 {
+    width: 70%;
+}
+.w40 {
+    width: 40%;
+}
+.w60 {
+    width: 60%;
+}
+.w5{ width: 5%;}
+.w35{ width: 35%;}
+.w12{ width: 12%;}
+.h-100 {
+    min-height: 100%;
+}
+.h-6 {
+    height: 20px;
+}
+.img-full {
+    width: 100%;
+}
+.text-center {
+    text-align: center
+}
+.font10 {
+    font-size: 10px;
+}
+.text-uppercase{ text-transform:uppercase}
+/*-----------------Headpart Start-------------*/
+.headpart {
+    display: block;
+}
+.logo {
+    justify-content: flex-start;
+}
+.logo img {
+    width: 5cm;
+}
+.report {
+    line-height: 20px;
+    font-weight: 700;
+    color: #031767;
+    font-size: 18px;
+}
+.report p{ font-size: 14px;}
+/*-----------------Headpart End-------------*/
+
+/*-----------------University Details Start-------------*/
+.university-details {
+    border: 1px solid #333;
+    padding: 0px;
+    border-bottom: none; padding: 10px 0 0 0 ;
+}
+.university-details h2 {
+    padding: 0 10px;
+}
+/*-----------------University Details End-------------*/
+/*-----------------General Details Start-------------*/
+.student-photo{ border: 1px solid #ccc; margin-bottom: 5px; width:90px;}
+.student-photo img{ height: 90px; width: 90px;}
+.sign{ border: 1px solid #ccc; margin-bottom: 10px; width:90px;}
+.sign img{ height: 20px; width: 90px;}
+/*-----------------General Details End-------------*/
+
+/*-----------------Subjects Offered Start-------------*/
+.table {
+    border-top: 1px solid #333;
+    margin-top: 10px;
+}
+.table-bordered td {
+    padding: 0 10px;
+    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+}
+.table-bordered tr td:last-child {
+    border-right: none;
+}
+.table-bordered thead td {
+    font-weight: 700
+}
+/*-----------------Subjects Offered end-------------*/
+/*-----------------DECLARATION Start-------------*/
+.declaration ul {
+    padding-left: 20px
+}
+/*-----------------DECLARATION end-------------*/
+
+.stmp{  padding-top:80px; padding-bottom:30px; position:relative}
+.stam-content{ margin-left:20px; font-size:14px; text-align:center; line-height:18px; position:relative; width:200px;}
+.stmp-sing{ position:absolute; left:20px; top:20px;  margin:auto; width:200px; height:auto;text-align:center;}
+.stmp-sing img{ width:100px; height:auto;}
+span.print-btn{ background:#f00; color:#fff; padding:0px 10px; font-size:12px; font-weight:500; border-radius:2px;}
+.qr-img{ width:90px; height:90px; margin:0 auto;}
+.qr{ border: 1px solid #ccc; margin-bottom: 10px; width:90px;}
+
+</style>
+
+
+        <script type="text/javascript" src="./5thSemAdmitCard_files/ClientScriptLib.js.download"></script> 
+        <script type="text/javascript" src="./5thSemAdmitCard_files/DynamicHtml.js.download"></script> 
+        <script type="text/javascript" src="./5thSemAdmitCard_files/DynamicHtmlTemplate.js.download"></script> 
+        <script type="text/javascript" src="./5thSemAdmitCard_files/ReportList.js.download"></script> 
+        <script type="text/javascript" src="./5thSemAdmitCard_files/PrintAdminCard.js.download"></script> 
+
+</head>
+
+<body onload="Init();" cz-shortcut-listen="true">
+<form method="post" action="https://www.jisexam.org/ExamSystemNew/forms/frmPrintAdmitCard.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwOTM3MDI2MjRkZObmrRHAH2uG2XeqvAFdlmsAb+1z3kXpsOnT6tes4dxn">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./5thSemAdmitCard_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./5thSemAdmitCard_files/ScriptResource.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./5thSemAdmitCard_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./5thSemAdmitCard_files/jsdebug" type="text/javascript"></script>
+<script src="./5thSemAdmitCard_files/jsdebug(1)" type="text/javascript"></script>
+<script src="./5thSemAdmitCard_files/jsdebug(2)" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3F8DA3B3">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAZoaCA5Iyjdwek/KK6Ckp56cxm9/JgZUqiDlwYNWF6YdVUM9kHqI1Bl2tfZN8vqlKPjmO5cTUt3Ej7BAQB4Fcr891wRCZW31YLk6wa+Aru1svDu+GEbARd9D7MpP3KE7+r9twV/TIN8w421/XyGuSOt8fZNYaEUp0mmR+gurNMFTQ==">
+</div>
+
+   <div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('m_ScriptManager', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+      
+                
+        </div>  
+
+<page size="A4">
+    <div class="main"> 
+    <!---------Head Part Start----------->
+    <div class="headpart all-clear">
+    <div class="logo pull-left"> <a><img id="img_college" src="./5thSemAdmitCard_files/gnit.png" alt="JIS Logo"></a> </div>
+    <div class="report pull-right"> 
+      <h5 class="all-clear">Admit Card <span id="cmd_print" class="print-btn pull-right" onclick="PrintDoc();" style="">Print</span></h5>
+      <p><span id="ctxt_course_stream">B.TECH - IT [SEMESTER - 5 (AY 2024-25)]</span>  </p>
+    </div>
+    </div>
+    <!-----------Head Part Start-----------> 
+    <!---------General Details Start-------->
+    <fieldset class="university-details mt-5">
+    <div class="part border-bottom all-clear">
+    <div class="w60 pull-left">
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Exam Category </div>
+    <div class="heading-details pull-right w60"><span id="ctxt_exam_type">Regular</span></div>
+    </div>
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Exam Center </div>
+    <div class="heading-details pull-right w60"><span id="m_college_name">Guru Nanak Institute of Technology</span></div>
+    </div>
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Roll No.</div>
+    <div class="heading-details pull-right w60"><span id="ctxt_roll">500422020013</span></div>
+    </div>
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Registration  No.</div>
+    <div class="heading-details pull-right w60"><span id="ctxt_reg_no">221430110372</span></div>
+    </div>
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Examination Seat No. </div>
+    <div class="heading-details pull-right w60"><span id="ctxt_exam_seat_no">500422020013</span></div>
+    </div>
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Branch </div>
+    <div class="heading-details pull-right w60"><span id="ctxt_stream">IT</span></div>
+    </div>
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Student's Name </div>
+    <div class="heading-details pull-right w60"><span id="ctxt_student_name">ANUSHKA SARKAR</span></div>
+    </div>
+    <div class="part all-clear pl-10 pr-10 lineheight-16">
+    <div class="heading pull-left w40">Guardian’s Name </div>
+    <div class="heading-details pull-right w60"><span id="ctxt_gurdian_name">Abhiman Sarkar</span></div>
+    </div>
+
+
+    <div class="part all-clear pl-10 pr-10 lineheight-16 mt-30">
+    The Candidate is allowed to appear in the aforesaid examination at the theory and practical examination in the subjects mentioned below on showing of this document (in hard copy).
+    </div>
+    </div>
+    <div class="w20 pull-right">
+    <div class="qr p-5 text-center"> <img id="img_qr" src="./5thSemAdmitCard_files/500422020013_qr.jpg" alt="qr" class="qr-img"> </div>
+    </div>
+    <div class="w20 pull-right">
+    <div class="student-photo p-5"> <img id="img_profile" src="./5thSemAdmitCard_files/7247_profile.jpg" alt="Syudent Photo" class="img-full"> </div>
+    <div class="sign p-5 h-6 text-center"> <img id="img_sig" src="./5thSemAdmitCard_files/7247_sig.jpg" alt="Syudent Photo" class="h-100"> </div>
+    </div>
+    </div>
+    </fieldset>
+    <!---------General Details end--------> 
+
+    <!---------Subjects Offered Start-------->
+    <fieldset class="university-details mt-5">
+    <legend class="h2 ml-10">Examination</legend>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
+    <thead>
+    <tr>
+    <td class="w5">S.No </td>
+    <td class="w12">Course Code</td>
+    <td class="w35">Course Name</td>
+    <td class="w12">Exam Date</td>
+    <td class="w12">Exam Time</td>
+    <td class="w12">Invigilator’s Sign</td>
+    </tr>
+    </thead>
+    <tbody id="m_subject_list"><tr><td>1</td><td>HSMC504</td><td>ECONOMICS FOR ENGINEERS </td><td>-</td><td>-</td><td>   </td></tr><tr><td>2</td><td>IT501</td><td>DATABASE MANAGEMENT SYSTEM</td><td>-</td><td>-</td><td>   </td></tr><tr><td>3</td><td>IT502</td><td>COMPUTER NETWORKING</td><td>-</td><td>-</td><td>   </td></tr><tr><td>4</td><td>IT503</td><td>DESIGN AND ANALYSIS OF ALGORITHM</td><td>-</td><td>-</td><td>   </td></tr><tr><td>5</td><td>IT505C</td><td>PROGRAMMING PRACTICE USING C++</td><td>-</td><td>-</td><td>   </td></tr><tr><td>6</td><td>IT591</td><td>DATABASE MANAGEMENT SYSTEM LAB</td><td>-</td><td>-</td><td>   </td></tr><tr><td>7</td><td>IT592</td><td>COMPUTER NETWORKING LAB</td><td>-</td><td>-</td><td>   </td></tr><tr><td>8</td><td>IT593</td><td>DESIGN AND ANALYSIS OF ALGORITHM LAB</td><td>-</td><td>-</td><td>   </td></tr><tr><td>9</td><td>IT595C</td><td>PROGRAMMING PRACTICE USING C++ LAB</td><td>-</td><td>-</td><td>   </td></tr><tr><td>10</td><td>MC501</td><td>INTELLECTUAL PROPERTY RIGHT</td><td>-</td><td>-</td><td>   </td></tr><tr><td>11</td><td>PR591</td><td>MINOR PROJECT - I</td><td>-</td><td>-</td><td>   </td></tr><tr><td>12</td><td>PR592</td><td>SKILL DEVELOPMENT - V: SOFT SKILL AND APTITUDE - II</td><td>-</td><td>-</td><td>   </td></tr></tbody>
+    </table>
+    </fieldset>
+    <!---------Subjects Offered end--------> 
+    <div class="declaration mt-5 stmp">
+    <div class="stmp-sing"> <img id="img_coe_sig" src="./5thSemAdmitCard_files/admit-sign-gnit.PNG" alt="COE Sig"></div>
+        <div class="stam-content">
+            <p>Controller of Examinations</p>
+            <p class="text-uppercase"><span id="coe_sig_college">Guru Nanak Institute of Technology</span></p>
+            
+        </div>
+    </div>
+    <!---------DECLARATION BY THE CANDIDATE start-------->
+    <div class="declaration mt-5 font10">
+    <h2>Notes</h2>
+    <ul style="list-style-type:circle">
+    <li>The admit card and permission to appear in the Examination is solely provisional and confidential.</li>
+    
+    <li>Admit card is generated based on the records provided and approved by the Dean/Head of the concerned department. </li>
+    
+    <li>If at any point of time, a student is found to be admitted to the program or any course wrongly and not fulfilling the criteria and norms laid by the University’s regulatory bodies, the enrolment and permission to appear in the examination will deemed to be cancelled with immediate effect.</li>
+    
+    <li>The student is hereby clearly informed that mere generation of admit card shall not confer any right or equity in their favor nor would the same entitle the students to claim any benefit including declaration of result.</li>
+    
+    <li>In case of any type of petition is pending in any of the Honorable Court against concerned student all action including declaration of result shall be subject to the decision of Honorable Court. </li>
+    
+    <li>A Criminal case/FIR is liable to be lodged against Person/Student giving the false information or hiding any relevant information making him unfit for appearing in the exam.</li>
+   
+    <li>Unfair/Malpractice of any nature shall be punishable as per the policy of the university .</li>
+   
+
+    </ul>
+    </div>
+    <!---------DECLARATION BY THE CANDIDATE end--------> 
+
+    </div>
+
+               <div>
+                    <input type="hidden" name="cntxt_nCollegeId" id="cntxt_nCollegeId" value="5">
+                    <input type="hidden" name="cntxt_nStudentId" id="cntxt_nStudentId" value="7247">
+                    <input type="hidden" name="cntxt_nSemId" id="cntxt_nSemId" value="5">
+                    <input type="hidden" name="cntxt_nExamId" id="cntxt_nExamId" value="212">
+                    <input type="hidden" name="cntxt_nExamType" id="cntxt_nExamType" value="1">
+                </div>
+</page>
+</form>
+
+
+</body></html>
